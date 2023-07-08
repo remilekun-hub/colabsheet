@@ -1,4 +1,4 @@
-require("dotenv").config();
+// require("dotenv").config();
 const io = require("socket.io")(process.env.PORT || 5000, {
   cors: {
     origin: "http://localhost:5173",
@@ -25,6 +25,7 @@ const io = require("socket.io")(process.env.PORT || 5000, {
 
 io.on("connection", async (socket) => {
   console.log("server started");
+  console.log(process.env);
   console.log(socket.id);
 
   socket.on("add-col", (data) => {
