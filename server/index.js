@@ -1,7 +1,7 @@
 require("dotenv").config();
 const io = require("socket.io")(process.env.PORT || 5000, {
   cors: {
-    origin: "https://colabsheet.vercel.app/",
+    origin: "https://customsheet.vercel.app/",
     methods: ["GET", "POST"],
   },
 });
