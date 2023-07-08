@@ -1,0 +1,7 @@
+/* change the font style of a single UI component */
+.ag-theme-alpine .ag-header-cell-label {
+  font-style: normal;
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
