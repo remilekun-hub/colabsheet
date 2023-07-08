@@ -242,7 +242,7 @@ function Singlesheet() {
                     };
                     const updatedRow = [...rowInput, newRow];
                     setRowInput([...updatedRow]);
-                    mySocket?.emit("add-row", updatedRow);
+                    mySocket?.emit("add-row", updatedRow, id);
                   }}
                 >
                   Add row

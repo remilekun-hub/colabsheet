@@ -1,8 +1,3 @@
-const express = require("express");
-const app = express();
-const db = require("./model/databases");
-const connectDB = require("./db/connect");
-
 const io = require("socket.io")(5000, {
   cors: {
     origin: "http://localhost:5173",
