@@ -59,7 +59,7 @@ function Singlesheet() {
     UnitPrice: string;
   };
   const [rowInput, setRowInput] = useState<rowInputData[]>(data);
-  const [columnDef, setColumnDef] = useState<any>([
+  const [columnDef, setColumnDef] = useState<{}[]>([
     { field: "Date", editable: true, type: "leftAligned" },
     { field: "CustomerName", editable: true, type: "leftAligned" },
     { field: "ItemSold", editable: true, type: "leftAligned" },
@@ -90,7 +90,7 @@ function Singlesheet() {
   // get data
 
   useEffect(() => {
-    const socket = io("http://localhost:5000");
+    const socket = io("https://colabspreadsheet.onrender.com/");
     setMySocket(socket);
 
     return () => {
